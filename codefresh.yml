@@ -1,0 +1,24 @@
+version: '1.0'
+steps:
+  BuildImage:
+    title: Building Docker Image
+    type: build
+    image_name: antweiss/cf-plugin-example
+  TestSuccess:
+    title: Running success test
+    description: This should succeed
+    image: ${{BuildImage}}
+    environment:
+    - PLUGIN_RESULT=SUCCESS
+  TestFailure:
+    fail_fast: false
+    title: Running failure test
+    description: This should fail
+    image: ${{BuildImage}}
+    environment:
+    - PLUGIN_RESULT=FAILURE
+  PushingToRegistry:
+    type: push
+    title: Pushing To Registry
+    candidate: ${{MyAppDockerImage}}
+    tag: '${{CF_BRANCH}}'
