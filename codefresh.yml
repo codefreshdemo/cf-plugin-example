@@ -20,5 +20,5 @@ steps:
   PushingToRegistry:
     type: push
     title: Pushing To Registry
-    candidate: ${{MyAppDockerImage}}
+    candidate: ${{BuildImage}}
     tag: '${{CF_BRANCH}}'
