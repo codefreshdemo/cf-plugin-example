@@ -9,8 +9,8 @@ msg "Running codefresh plugin $CF_PLUGIN_NAME"
 #### Check for required environment variables
 [ -z "$PLUGIN_RESULT" ] && err "Need to set PLUGIN_RESULT"
 
-msg "Environment variable PLUGIN_RESULT is: $PLUGIN_RESULT"
-msg "Codefresh account is $CF_ACCOUNT"
+msg "Environment variable PLUGIN_RESULT is: ${PLUGIN_RESULT}"
+msg "Codefresh account is ${CF_ACCOUNT}"
 warn "Contents of your workflow directory: \n $(ls -la ${CF_VOLUME_PATH})"
 
 if [ "$PLUGIN_RESULT" = "SUCCESS" ]; then
