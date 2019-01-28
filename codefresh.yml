@@ -3,7 +3,7 @@ steps:
   BuildImage:
     title: Building Docker Image
     type: build
-    image_name: {{ .DockerRepo }}/{{ .Name }}
+    image_name: ${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}
   TestSuccess:
     title: Running success test
     description: This should succeed
