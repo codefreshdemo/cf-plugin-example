@@ -3,7 +3,7 @@ steps:
   BuildImage:
     title: Building Docker Image
     type: build
-    image_name: antweiss/cf-plugin-example
+    image_name: {{ .DockerRepo }}/{{ .Name }}
   TestSuccess:
     title: Running success test
     description: This should succeed

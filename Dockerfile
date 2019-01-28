@@ -1,6 +1,6 @@
 FROM alpine
-LABEL MAINTAINER=Engineer CATEGORY="Codefresh Plugins"
+LABEL MAINTAINER={{ .Maintainer }}  CATEGORY="Codefresh Plugins"
 WORKDIR /home
-ENV CF_PLUGIN_NAME="Codefresh Sample Plugin"
+ENV CF_PLUGIN_NAME="{{ .Name }}"
 COPY . .
 ENTRYPOINT /home/entrypoint.sh
