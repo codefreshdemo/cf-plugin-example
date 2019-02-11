@@ -1,6 +1,7 @@
-#!/bin/python
+#!/usr/local/bin/python
 import time
 import os
+import sys
 #### Prepare functions for prettier output
 def msg(message):
     print ("\033[92m INFO [{}] ---> {}\033[0m".format(time.strftime("%H:%M:%S"), message))
@@ -8,6 +9,7 @@ def warn(message):
     print ("\033[93m WARN [{}] ---> {}\033[0m".format(time.strftime("%H:%M:%S"), message))
 def err(message):
     print ("\033[91m ERR  [{}] ---> {}\033[0m".format(time.strftime("%H:%M:%S"), message))
+    sys.exit(1)
 
 msg("Running codefresh plugin {}".format(os.getenv('CF_PLUGIN_NAME', "undefined")))
 # #### Check for required environment variables
