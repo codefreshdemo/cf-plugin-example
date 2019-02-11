@@ -1,0 +1,9 @@
+# this file serves as an example of plugin usage to display on
+# https://steps.codefresh.io/
+steps:
+  UsePlugin:
+    title: running the plugin
+    description: This should succeed
+    image: {{ .Name }}:{{ .Tag }}
+    environment:
+    - PLUGIN_RESULT=SUCCESS
