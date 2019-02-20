@@ -3,7 +3,7 @@ steps:
   BuildImage:
     title: Building Docker Image
     type: build
-    image_name: {{ .DockerRepo }}/{{ .Name }}
+    image_name: otomato/my-plugin
   TestSuccess:
     title: Running success test
     description: This should succeed
