@@ -1,6 +1,6 @@
 image: my-cf-lugin
-tag: "34"
-version: "34"
+tag: "0.2"
+version: "0.2"
 categories: ["Security"]
 description: Codefresh Plugin
 keywords: ['docker']
