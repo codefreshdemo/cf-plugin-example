@@ -3,7 +3,7 @@ steps:
   BuildImage:
     title: Building Docker Image
     type: build
-    image_name: otomato/my-plugin
+    image_name: codefresh/cf-plugin-example
   TestSuccess:
     title: Running success test
     description: This should succeed
@@ -21,4 +21,4 @@ steps:
     type: push
     title: Pushing To Registry
     candidate: ${{BuildImage}}
-    tag: '${{CF_BRANCH}}'
+    tag: "0.2"
